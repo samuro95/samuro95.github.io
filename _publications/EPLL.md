@@ -2,7 +2,7 @@
 title: "EPLL: an image denoising method using a Gaussian mixture model learned on a large set of patches"
 collection: publications
 permalink: 
-date: 2018-12-24
+date: 2018-12-23
 venue: 'IPOL'
 paperurl: 'https://www.ipol.im/pub/art/2018/242/'
 ---
