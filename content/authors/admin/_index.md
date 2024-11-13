@@ -81,5 +81,3 @@ awards:
 
 
 I am currently at ENS Paris working with with Gabriel Peyré. I obtained my Ph.D from Université de Bordeaux, co-supervised by Nicolas Papadakis and  Arthur Leclaire. My research interests include image restoration, generative modeling, nonconvex optimization. The main objective of my PhD was to develop inovative deep denoising priors along with convergent optimization schemes for solving image inverse problems. I am also one of the main developer of the Python library [DeepInv](https://github.com/deepinv/deepinv), which provides a unified framework for solving inverse problems using deep neural networks. 
-<!-- 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resume{{< /staticref >}}. -->
