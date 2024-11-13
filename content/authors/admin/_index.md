@@ -68,7 +68,7 @@ education:
     date_end: 2018
 
 awards:
-  - title: Neural Networks and Deep Learning
+  - title: Best PhD Award from GRETSI, Club EEA, and GdR IASIS
     url: https://www.coursera.org/learn/neural-networks-deep-learning
     date: '2023-11-25'
     awarder: Coursera

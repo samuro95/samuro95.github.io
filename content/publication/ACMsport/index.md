@@ -1,24 +1,23 @@
 ---
-title: 'Convergent Bregman Plug-and-Play Image Restoration for Poisson Inverse Problems'
+title: 'Self-Supervised Small Soccer Player Detection and Tracking'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - Ulugbek Kamilov
-  - Arthur Leclaire
-  - Nicolas Papadakis
+  - Coloma Ballester
+  - Gloria Haro
 
 # Author notes (optional)
 author_notes:
   - 
   - 
-date: '2023-05-15T00:00:00Z'
+date: '2020-10-01T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2023-05-15T00:00:00Z'
+publishDate: '2020-10-01T00:00:00Z'
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -27,10 +26,10 @@ publishDate: '2023-05-15T00:00:00Z'
 publication_types: ['1']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Neural Information Processing Systems 2023*
-publication_short: In *Neurips 2023*
+publication: 3rd international workshop on multimedia content analysis in sports (2020)
+publication_short: ACM MMSports 2020
 
-abstract: Plug-and-Play (PnP) methods are efficient iterative algorithms for solving ill-posed image inverse problems. PnP methods are obtained by using deep Gaussian denoisers instead of the proximal operator or the gradient-descent step within proximal algorithms. Current PnP schemes rely on data-fidelity terms that have either Lipschitz gradients or closed-form proximal operators, which is not applicable to Poisson inverse problems. Based on the observation that the Gaussian noise is not the adequate noise model in this setting, we propose to generalize PnP using the Bregman Proximal Gradient (BPG) method. BPG replaces the Euclidean distance with a Bregman divergence that can better capture the smoothness properties of the problem. We introduce the Bregman Score Denoiser specifically parametrized and trained for the new Bregman geometry and prove that it corresponds to the proximal operator of a nonconvex potential. We propose two PnP algorithms based on the Bregman Score Denoiser for solving Poisson inverse problems. Extending the convergence results of BPG in the nonconvex settings, we show that the proposed methods converge, targeting stationary points of an explicit global functional. Experimental evaluations conducted on various Poisson inverse problems validate the convergence results and showcase effective restoration performance.
+abstract: In a soccer game, the information provided by detecting and tracking brings crucial clues to further analyze and understand some tactical aspects of the game, including individual and team actions. State-of-the-art tracking algorithms achieve impressive results in scenarios on which they have been trained for, but they fail in challenging ones such as soccer games. This is frequently due to the player small relative size and the similar appearance among players of the same team. Although a straightforward solution would be to retrain these models by using a more specific dataset, the lack of such publicly available annotated datasets entails searching for other effective solutions. In this work, we propose a self-supervised pipeline which is able to detect and track low-resolution soccer players under different recording conditions without any need of ground-truth data. Extensive quantitative and qualitative experimental …
 
 # Summary. An optional shortened abstract.
 #summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
@@ -45,8 +44,8 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'https://arxiv.org/pdf/2306.03466.pdf'
-url_code: ''
+url_pdf: 'https://repositori.upf.edu/bitstream/handle/10230/47356/hurault_mmsports_self.pdf?sequence=1&isAllowed=y'
+url_code: 'https://github.com/samuro95/Self-Supervised-Small-Soccer-Player-Detection-Tracking'
 url_dataset: ''
 url_poster: ''
 url_project: ''
