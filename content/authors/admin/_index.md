@@ -69,12 +69,16 @@ education:
 
 awards:
   - title: Best PhD Award from GRETSI, Club EEA, and GdR IASIS
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
-    summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
+    url: https://gretsi.fr/prix-de-these2024/resultats.php
+    date: '2024-04-30'
+    awarder: GRETSI, Club EEA, and GdR IASIS
+
+  - title: Best Student Paper Award at SSVM 2023
+    url: https://events.unibo.it/ssvm2023
+    date: '2024-05-25'
+    awarder: SSVM
+
+
 ---
 
 ## About Me
