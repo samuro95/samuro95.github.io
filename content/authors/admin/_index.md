@@ -45,7 +45,7 @@ profiles:
 interests:
   - Optimization
   - Inverse Problems
-  - Machine Learning 
+  - Deep Learning
   - Optimal Transport
 
 education:
