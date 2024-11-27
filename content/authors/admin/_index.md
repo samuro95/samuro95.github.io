@@ -52,7 +52,7 @@ education:
   - area: PhD in Machine Learning & Image Processing
     institution: University of Bordeaux, France
     date_start: '2020-01-10'
-    date_end: '2023-31-11'
+    date_end: '2023-30-11'
     summary: |
      Convergent plug-and-play methods for image inverse problems with explicit and nonconvex deep regularization. Supervised by Prof. Nicolas Papadakis and Dr. Arthur Leclaire. 
     button:
