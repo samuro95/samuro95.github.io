@@ -51,8 +51,8 @@ interests:
 education:
   - area: PhD in Machine Learning & Image Processing
     institution: University of Bordeaux, France
-    date_start: 2020
-    date_end: 2023
+    date_start: '2020-01-10'
+    date_end: '2023-31-11'
     summary: |
      Convergent plug-and-play methods for image inverse problems with explicit and nonconvex deep regularization. Supervised by Prof. Nicolas Papadakis and Dr. Arthur Leclaire. 
     button:
@@ -60,12 +60,12 @@ education:
       url: 'https://theses.hal.science/tel-04401431/'
   - area: Master "Mathematiques, Vision, Appentissage" (MVA)
     institution: Ecole Normale Superieure Paris-Saclay
-    date_start: 2018
-    date_end: 2019
+    date_start: '2018-01-09'
+    date_end: '2019-01-09'
   - area: Bachelor in Mathematics
     institution: Ecole Normale Superieure Paris-Saclay
-    date_start: 2016
-    date_end: 2018
+    date_start: '2016-01-09'
+    date_end: '2018-01-09'
 
 awards:
   - title: Best PhD Award from GRETSI, Club EEA, and GdR IASIS
