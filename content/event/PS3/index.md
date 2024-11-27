@@ -1,14 +1,14 @@
 ---
-title:  Seminaire du LJK Grenoble
+title:  The Paris-Saclay Signal Seminar
 
-event:  Seminaire du LJK Grenoble
-event_url: https://www-ljk.imag.fr/spip.php?article35&id=66d5728617f6fc17d9d067fc&type=SEMINAIRE
+event:  Seminaire de l'equipe Signal du L2S
+event_url: https://s3-seminar.github.io/
 
-location: Paris, France
+location: Saclay, France
 
-summary: Seminar *Convergent plug-and-play methods for image inverse problems with explicit and nonconvex deep regularization*
+summary: Seminar *On the convergence of deep plug-and-play methods for image restoration*
 
-abstract: Plug-and-play methods constitute a class of iterative algorithms for imaging inverse problems where regularization is performed by an off-the-shelf Gaussian denoiser. These methods have demonstrated impressive visual results, particularly when the denoiser is parameterized by deep neural networks. However, the theoretical convergence of PnP methods has yet to be fully established.This talk begins with an overview of the literature on PnP algorithms, followed by the introduction of new convergence results for these methods when paired with a specific denoiser, known as the Gradient-Step Denoiser. This denoiser writes as a gradient descent step on an explicit, nonconvex function parameterized by a deep neural network. The analysis shows that the resulting PnP algorithms converge to stationary points of explicit functionals. These algorithms are then applied to various ill-posed inverse problems, including deblurring, super-resolution, and inpainting. Finally, to address inverse problems corrupted by Poisson noise, we will introduce a novel Bregman version of PnP based on the Bregman Proximal Gradient (BPG) optimization algorithm.
+abstract: Plug-and-Play (PnP) methods constitute a class of iterative algorithms for imaging problems where regularization is performed by an off-the-shelf denoiser. Specifically, given an image dataset, optimizing a function (e.g. a neural network) to remove Gaussian noise is equivalent to approximating the gradient or the proximal operator of the log prior of the training dataset. Therefore, any off-the-shelf denoiser can be used as an implicit prior and inserted into an optimization scheme to restore images. The PnP and Regularization by Denoising (RED) frameworks provide a basis for this approach, for which various convergence analyses have been proposed in the literature. We will more specifically introduce the Gradient Step and Proximal denoisers recently proposed to restore PnP and RED algorithms to their original form as (nonconvex) real proximal splitting algorithms.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
