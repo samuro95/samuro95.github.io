@@ -78,6 +78,11 @@ awards:
     date: '2024-05-25'
     awarder: SSVM
 
+  - title: Open Science National Prize, for the library DeepInv
+    url: https://www.ouvrirlascience.fr/category/prix-logiciel-libre/
+    date: '2024-11-26'
+    awarder: Ministère de l'enseignement supérieur et de la recherche
+
 
 ---
 
