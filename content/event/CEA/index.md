@@ -1,18 +1,18 @@
 ---
-title: Seminaire du groupe Image du MAP5 
+title: CIROQUO scientific days at CEA
 
-event:  Seminaire du groupe Image du MAP5 
-event_url: https://www.ens-lyon.fr/PHYSIQUE/seminars/machine-learning-and-signal-processing/mlsp23_Hurault
+event: CIROQUO scientific days at CEA
+event_url: https://www.google.com/search?q=CIROQUO+scientific+days+at+CEA&oq=CIROQUO+scientific+days+at+CEA&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzE2OWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8
 
-location: Paris, France
+location: Saclay, France
 
-summary: Seminar *On the convergence of deep plug-and-play methods for image restoration*
+summary: Seminar *Convergence analysis of Plug-and-Play algorithms for image inverse problems*
 
-abstract: Plug-and-Play (PnP) methods constitute a class of iterative algorithms for imaging problems where regularization is performed by an off-the-shelf denoiser. Specifically, given an image dataset, optimizing a function (e.g. a neural network) to remove Gaussian noise is equivalent to approximating the gradient or the proximal operator of the log prior of the training dataset. Therefore, any off-the-shelf denoiser can be used as an implicit prior and inserted into an optimization scheme to restore images. The PnP and Regularization by Denoising (RED) frameworks provide a basis for this approach, for which various convergence analyses have been proposed in the literature. We will more specifically introduce the Gradient Step and Proximal denoisers recently proposed to restore PnP and RED algorithms to their original form as (nonconvex) real proximal splitting algorithms.
+abstract: Plug-and-play (PnP) methods are a class of iterative algorithms for imaging inverse problems, leveraging off-the-shelf Gaussian denoisers for regularization. These methods achieve impressive visual results, especially when deep neural networks parameterize the denoisers. However, the theoretical convergence of PnP methods has yet to be fully established. This talk provides an overview of the PnP literature, introduces new convergence results for PnP algorithms when paired with specific denoisers, and finally, presents a novel Bregman version of Plug-and-Play.
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2024-11-08'
+date: '2024-11-11'
 #date_end: '2030-06-01T15:00:00Z'
 all_day: true
 
