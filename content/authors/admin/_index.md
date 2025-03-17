@@ -44,9 +44,9 @@ profiles:
 
 interests:
   - Optimization
-  - Inverse Problems
+  - Image Inverse Problems
   - Deep Learning
-  - Optimal Transport
+  - Generative Models
 
 education:
   - area: PhD in Machine Learning & Image Processing
