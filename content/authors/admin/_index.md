@@ -34,7 +34,7 @@ profiles:
     url: 'mailto:samuel.hurault@ens.fr'
     label: E-mail Me
   - icon: brands/x
-    url: https://twitter.com/HuraultSamuel
+    url: https://.com/HuraultSamuel
   - icon: brands/github
     url:  https://github.com/samuro95
   - icon: brands/linkedin
