@@ -43,10 +43,11 @@ profiles:
     url: https://scholar.google.fr/citations?user=f_rtYCAAAAAJ&hl=fr
 
 interests:
-  - Optimization
-  - Image Inverse Problems
-  - Deep Learning
-  - Generative Models
+  - Deep priors for image inverse problems.
+  - Theory of denoising diffusion models. 
+  - Non-Euclidean optimization.
+  - Non-convex convergence of proximal algorithm. 
+  - Reproducible research.
 
 education:
   - area: PhD in Machine Learning & Image Processing
@@ -89,4 +90,4 @@ awards:
 ## About Me
 
 
-I am currently at ENS Paris working with with Gabriel Peyré. I obtained my Ph.D from Université de Bordeaux, co-supervised by Nicolas Papadakis and  Arthur Leclaire. My research interests include image inverse problems, generative modeling, optimization. The main objective of my PhD was to develop inovative deep denoising priors along with convergent optimization schemes for solving image inverse problems. I am also one of the main developer of the Python library [DeepInv](https://github.com/deepinv/deepinv), which provides a unified framework for solving inverse problems using deep neural networks. 
+I am currently at ENS Paris working with with Gabriel Peyré. My research interests include image inverse problems, generative modeling, optimization. I obtained my Ph.D from Université de Bordeaux, co-supervised by Nicolas Papadakis and  Arthur Leclaire. I am also one of the main developer of the Python library [DeepInv](https://github.com/deepinv/deepinv), which provides a unified framework for solving inverse problems using deep neural networks. 
