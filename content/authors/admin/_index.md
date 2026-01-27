@@ -24,7 +24,7 @@ role: Postdoctoral researcher
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: LIGM
+  - name: LIGM, Université Gustave Eiffel
     url: https://ligm.univ-eiffel.fr
 
 # Social network links
