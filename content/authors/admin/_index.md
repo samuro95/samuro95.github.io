@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Postdoctoral researcher
+role: CR CNRS
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
