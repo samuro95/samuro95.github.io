@@ -44,6 +44,7 @@ profiles:
 
 interests:
   - Diffusion models & Flow Matching.
+  - Large Language Models.
   - Drifting models.
   - Image inverse problems.
   - Proximal algorithms.
