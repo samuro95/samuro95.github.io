@@ -1,0 +1,34 @@
+{{ define "main" }}
+  <div class="shell page-shell">
+    <header class="page-intro">
+      {{ if eq .Section "publication" }}
+        <p class="eyebrow">Research output</p>
+        <h1>Publications</h1>
+        <p>Work on generative modeling, image inverse problems, and optimization.</p>
+      {{ else if eq .Section "event" }}
+        <p class="eyebrow">Seminars &amp; conferences</p>
+        <h1>Talks</h1>
+        <p>Invited seminars, tutorials, and conference presentations.</p>
+      {{ else }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+      {{ end }}
+    </header>
+
+    {{ if eq .Section "publication" }}
+      <div class="publication-list full-list">
+        {{ range .Pages.ByDate.Reverse }}{{ partial "publication-item.html" . }}{{ end }}
+      </div>
+    {{ else if eq .Section "event" }}
+      <div class="talk-list full-list">
+        {{ range .Pages.ByDate.Reverse }}{{ partial "talk-item.html" . }}{{ end }}
+      </div>
+    {{ else }}
+      <div class="generic-list">
+        {{ range .Pages.ByDate.Reverse }}
+          <article><p class="eyebrow">{{ .Date.Format "2006" }}</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>{{ with .Summary }}<p>{{ . }}</p>{{ end }}</article>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

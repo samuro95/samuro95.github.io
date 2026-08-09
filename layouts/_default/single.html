@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <div class="shell article-shell">
+    {{ if eq .Section "publication" }}
+      <article>
+        <header class="article-header">
+          <p class="eyebrow">Publication · {{ .Date.Format "2006" }}</p>
+          <h1>{{ .Title }}</h1>
+          {{ with .Params.authors }}
+            <p class="authors large">
+              {{- range $index, $author := . -}}
+                {{- if $index }}, {{ end -}}
+                {{- if eq $author "admin" -}}<strong>Samuel Hurault</strong>{{- else -}}{{ $author }}{{- end -}}
+              {{- end -}}
+            </p>
+          {{ end }}
+          {{ with .Params.publication }}<p class="venue large">{{ . | markdownify }}</p>{{ end }}
+          {{ partial "resource-links.html" . }}
+        </header>
+        {{ with .Params.abstract }}
+          <section class="article-section">
+            <h2>Abstract</h2>
+            <div class="prose"><p>{{ . | markdownify }}</p></div>
+          </section>
+        {{ end }}
+        {{ with .Content }}<section class="article-section prose">{{ . }}</section>{{ end }}
+      </article>
+    {{ else if eq .Section "event" }}
+      <article>
+        <header class="article-header">
+          <p class="eyebrow">Talk · {{ .Date.Format "2 January 2006" }}</p>
+          <h1>{{ .Title }}</h1>
+          {{ with .Params.event }}<p class="venue large">{{ . }}</p>{{ end }}
+          {{ with .Params.location }}<p class="authors large">{{ . }}</p>{{ end }}
+          {{ partial "resource-links.html" . }}
+        </header>
+        {{ with .Params.summary }}<section class="article-section"><h2>Presentation</h2><div class="prose"><p>{{ . | markdownify }}</p></div></section>{{ end }}
+        {{ with .Params.abstract }}<section class="article-section"><h2>Abstract</h2><div class="prose"><p>{{ . | markdownify }}</p></div></section>{{ end }}
+      </article>
+    {{ else }}
+      <article>
+        <header class="article-header"><h1>{{ .Title }}</h1></header>
+        <div class="prose">{{ .Content }}</div>
+      </article>
+    {{ end }}
+  </div>
+{{ end }}

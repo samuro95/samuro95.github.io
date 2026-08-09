@@ -1,0 +1,54 @@
+{{ define "main" }}
+  {{ $profile := site.GetPage "/authors/admin" }}
+  <div class="shell page-shell">
+    {{ if eq .File.BaseFileName "experience" }}
+      <header class="page-intro">
+        <p class="eyebrow">Curriculum vitae</p>
+        <h1>Experience</h1>
+        <p>Research appointments, education, and distinctions.</p>
+      </header>
+      {{ with $profile }}
+        <section class="cv-section">
+          <h2>Current appointment</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <p class="timeline-date">Current</p>
+              <div><h3>{{ .Params.role }}</h3>{{ with index .Params.organizations 0 }}<p><a href="{{ .url }}">{{ .name }}</a></p>{{ end }}</div>
+            </article>
+          </div>
+        </section>
+        <section class="cv-section">
+          <h2>Education</h2>
+          <div class="timeline">
+            {{ range .Params.education }}
+              <article class="timeline-item">
+                <p class="timeline-date">{{ time.Format "2006" .date_start }}–{{ time.Format "2006" .date_end }}</p>
+                <div>
+                  <h3>{{ .area }}</h3>
+                  <p>{{ .institution }}</p>
+                  {{ with .summary }}<div class="timeline-summary">{{ . | markdownify }}</div>{{ end }}
+                  {{ with .button }}<p><a class="text-link" href="{{ .url }}">{{ .text }} <span aria-hidden="true">↗</span></a></p>{{ end }}
+                </div>
+              </article>
+            {{ end }}
+          </div>
+        </section>
+        <section class="cv-section">
+          <h2>Awards</h2>
+          <div class="timeline">
+            {{ range sort .Params.awards "date" "desc" }}
+              <article class="timeline-item">
+                <p class="timeline-date">{{ time.Format "2006" .date }}</p>
+                <div><h3><a href="{{ .url }}">{{ .title }}</a></h3><p>{{ .awarder }}</p></div>
+              </article>
+            {{ end }}
+          </div>
+        </section>
+        <p class="cv-download"><a href="{{ "/uploads/resume.pdf" | relURL }}">Download the full CV <span aria-hidden="true">↓</span></a></p>
+      {{ end }}
+    {{ else }}
+      <header class="page-intro"><h1>{{ .Title }}</h1></header>
+      <div class="prose">{{ .Content }}</div>
+    {{ end }}
+  </div>
+{{ end }}

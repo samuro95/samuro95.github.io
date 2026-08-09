@@ -1,0 +1,68 @@
+{{ define "main" }}
+  {{ $profile := site.GetPage "/authors/admin" }}
+  <div class="shell home-layout">
+    {{ with $profile }}
+      <section class="intro" aria-labelledby="intro-name">
+        <div class="portrait-wrap">
+          {{ with .Resources.GetMatch "avatar*" }}
+            <img class="portrait" src="{{ .RelPermalink }}" alt="Portrait of Samuel Hurault" width="360" height="360">
+          {{ end }}
+        </div>
+        <div class="intro-copy">
+          <p class="eyebrow">Researcher in applied mathematics &amp; machine learning</p>
+          <h1 id="intro-name">Samuel Hurault</h1>
+          <p class="position">{{ .Params.role }} · {{ with index .Params.organizations 0 }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}</p>
+          <div class="bio prose">{{ .Content }}</div>
+          <div class="profile-links" aria-label="Profile links">
+            {{ range .Params.profiles }}
+              {{ if not (in .icon "brands/x") }}
+                {{ $label := "Profile" }}
+                {{ if in .icon "at-symbol" }}{{ $label = "Email" }}{{ end }}
+                {{ if in .icon "github" }}{{ $label = "GitHub" }}{{ end }}
+                {{ if in .icon "linkedin" }}{{ $label = "LinkedIn" }}{{ end }}
+                {{ if in .icon "google-scholar" }}{{ $label = "Google Scholar" }}{{ end }}
+                <a href="{{ .url }}">{{ $label }} <span aria-hidden="true">↗</span></a>
+              {{ end }}
+            {{ end }}
+            <a href="{{ "/uploads/resume.pdf" | relURL }}">Download CV <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="research-strip" aria-labelledby="research-title">
+        <h2 id="research-title">Research interests</h2>
+        <ul>
+          {{ range .Params.interests }}<li>{{ strings.TrimSuffix "." . }}</li>{{ end }}
+        </ul>
+      </section>
+    {{ end }}
+
+    {{ $publications := where site.RegularPages "Section" "publication" }}
+    <section class="home-section" aria-labelledby="publications-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="publications-title">Recent publications</h2>
+        </div>
+        <a class="all-link" href="{{ "/publication/" | relURL }}">All publications <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="publication-list">
+        {{ range first 6 $publications.ByDate.Reverse }}{{ partial "publication-item.html" . }}{{ end }}
+      </div>
+    </section>
+
+    {{ $talks := where site.RegularPages "Section" "event" }}
+    <section class="home-section talks-section" aria-labelledby="talks-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Seminars &amp; conferences</p>
+          <h2 id="talks-title">Recent talks</h2>
+        </div>
+        <a class="all-link" href="{{ "/event/" | relURL }}">All talks <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="talk-list">
+        {{ range first 4 $talks.ByDate.Reverse }}{{ partial "talk-item.html" . }}{{ end }}
+      </div>
+    </section>
+  </div>
+{{ end }}

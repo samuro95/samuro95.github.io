@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href="{{ "/" | relURL }}" aria-label="Samuel Hurault, home">
+      <span>Samuel</span> Hurault
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="{{ "/publication/" | relURL }}"{{ if eq .Section "publication" }} aria-current="page"{{ end }}>Publications</a>
+      <a href="{{ "/event/" | relURL }}"{{ if eq .Section "event" }} aria-current="page"{{ end }}>Talks</a>
+      <a href="{{ "/experience/" | relURL }}"{{ if eq .RelPermalink ("/experience/" | relURL) }} aria-current="page"{{ end }}>Experience</a>
+      <a href="{{ "/uploads/resume.pdf" | relURL }}">CV <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
