@@ -1,4 +1,5 @@
-{{ $hasLinks := or .Params.url_pdf .Params.url_code .Params.url_slides .Params.url_video .Params.doi .Params.event_url .Params.url_scholar }}
+{{ $citation := .Resources.GetMatch "cite.bib" }}
+{{ $hasLinks := or .Params.url_pdf .Params.url_code .Params.url_slides .Params.url_video .Params.doi .Params.event_url .Params.url_scholar $citation }}
 {{ if $hasLinks }}
   <div class="resource-links" aria-label="Resources">
     {{ with .Params.url_pdf }}<a href="{{ . }}">Paper <span aria-hidden="true">↗</span></a>{{ end }}
@@ -8,5 +9,6 @@
     {{ with .Params.doi }}<a href="https://doi.org/{{ . }}">DOI <span aria-hidden="true">↗</span></a>{{ end }}
     {{ with .Params.event_url }}<a href="{{ . }}">Event <span aria-hidden="true">↗</span></a>{{ end }}
     {{ with .Params.url_scholar }}<a href="{{ . }}">Scholar <span aria-hidden="true">↗</span></a>{{ end }}
+    {{ with $citation }}<a class="cite-link" href="{{ .RelPermalink }}" download title="Download BibTeX citation"><span class="cite-icon" aria-hidden="true">“</span> Cite</a>{{ end }}
   </div>
 {{ end }}

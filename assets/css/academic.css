@@ -222,6 +222,8 @@ h3 { font-size: 1.18rem; letter-spacing: -0.015em; }
 .venue em { font-family: var(--serif); }
 .resource-links { margin-top: 13px; }
 .resource-links a { font-size: 0.7rem; }
+.resource-links .cite-link { display: inline-flex; align-items: center; gap: 0.22rem; }
+.cite-icon { font-family: var(--serif); font-size: 1.35em; font-weight: 700; line-height: 0.7; }
 
 .talk-item {
   display: grid;

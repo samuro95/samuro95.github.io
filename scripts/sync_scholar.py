@@ -139,6 +139,62 @@ def parse_authors(value: str) -> list[str]:
     return mapped or ["admin"]
 
 
+def citation_authors(value: str) -> list[str]:
+    authors = [part.strip() for part in value.split(",") if part.strip()]
+    mapped: list[str] = []
+    for author in authors:
+        normalized = normalize_title(author)
+        if re.search(r"\b(s|samuel) hurault\b", normalized) or normalized.startswith("hurault s"):
+            mapped.append("Samuel Hurault")
+        else:
+            mapped.append(author)
+    return mapped or ["Samuel Hurault"]
+
+
+def bibtex_key(work: dict[str, str], year: int) -> str:
+    authors = citation_authors(work.get("authors", ""))
+    surname = normalize_title(authors[0]).split()[-1]
+    title_words = normalize_title(work["title"]).split()
+    title_part = "".join(title_words[:2])
+    return f"{surname}{year}{title_part}"
+
+
+def bibtex_value(value: str) -> str:
+    return value.replace("&", r"\&").replace("%", r"\%").replace("#", r"\#")
+
+
+def publication_bibtex(work: dict[str, str], year: int) -> str:
+    title = bibtex_value(work["title"])
+    authors = " and ".join(bibtex_value(author) for author in citation_authors(work.get("authors", "")))
+    venue = re.sub(r"\s+,", ",", work.get("venue", ""))
+    arxiv_match = re.search(r"arXiv:\s*(\d{4}\.\d{4,5})", venue, re.IGNORECASE)
+    key = bibtex_key(work, year)
+
+    fields = [
+        f"  title = {{{title}}}",
+        f"  author = {{{authors}}}",
+        f"  year = {{{year}}}",
+    ]
+    entry_type = "article"
+    if arxiv_match:
+        arxiv_id = arxiv_match.group(1)
+        entry_type = "misc"
+        fields.extend(
+            [
+                f"  eprint = {{{arxiv_id}}}",
+                "  archivePrefix = {arXiv}",
+                f"  url = {{https://arxiv.org/abs/{arxiv_id}}}",
+            ]
+        )
+    else:
+        if venue:
+            fields.append(f"  journal = {{{bibtex_value(venue)}}}")
+        if work.get("url"):
+            fields.append(f"  url = {{{work['url']}}}")
+
+    return f"@{entry_type}{{{key},\n" + ",\n".join(fields) + "\n}\n"
+
+
 def fetch_page(profile_id: str, start: int) -> str:
     query = urlencode(
         {"user": profile_id, "hl": "en", "pagesize": 100, "cstart": start, "sortby": "pubdate"}
@@ -289,6 +345,9 @@ def sync(
             news_bundle.mkdir(parents=True, exist_ok=False)
             (publication_bundle / "index.md").write_text(
                 publication_markdown(work, year, scholar_key), encoding="utf-8"
+            )
+            (publication_bundle / "cite.bib").write_text(
+                publication_bibtex(work, year), encoding="utf-8"
             )
             (news_bundle / "index.md").write_text(
                 news_markdown(work, relative_publication, today), encoding="utf-8"
