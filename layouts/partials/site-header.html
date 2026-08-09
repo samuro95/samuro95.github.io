@@ -4,7 +4,6 @@
       <span>Samuel</span> Hurault
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="{{ "/news/" | relURL }}"{{ if eq .Section "news" }} aria-current="page"{{ end }}>News</a>
       <a href="{{ "/publication/" | relURL }}"{{ if eq .Section "publication" }} aria-current="page"{{ end }}>Publications</a>
       <a href="{{ "/event/" | relURL }}"{{ if eq .Section "event" }} aria-current="page"{{ end }}>Talks</a>
       <a href="{{ "/experience/" | relURL }}"{{ if eq .RelPermalink ("/experience/" | relURL) }} aria-current="page"{{ end }}>Experience</a>

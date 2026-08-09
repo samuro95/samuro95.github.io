@@ -37,22 +37,6 @@
       </section>
     {{ end }}
 
-    {{ $news := where site.RegularPages "Section" "news" }}
-    {{ if gt (len $news) 0 }}
-      <section class="home-section news-section" aria-labelledby="news-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Updates</p>
-            <h2 id="news-title">News</h2>
-          </div>
-          <a class="all-link" href="{{ "/news/" | relURL }}">All news <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="news-list">
-          {{ range first 4 $news.ByDate.Reverse }}{{ partial "news-item.html" . }}{{ end }}
-        </div>
-      </section>
-    {{ end }}
-
     {{ $publications := where site.RegularPages "Section" "publication" }}
     <section class="home-section" aria-labelledby="publications-title">
       <div class="section-heading">
