@@ -43,10 +43,10 @@ profiles:
     url: https://scholar.google.fr/citations?user=f_rtYCAAAAAJ&hl=fr
 
 interests:
-  - Denoising diffusion models. 
-  - Flow Matching.
-  - Deep priors for image inverse problems.
-  - Proximal algorithms. 
+  - Diffusion models & Flow Matching.
+  - Drifting models.
+  - Image inverse problems.
+  - Proximal algorithms.
 
 education:
   - area: PhD in Machine Learning & Image Processing
