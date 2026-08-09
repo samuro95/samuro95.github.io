@@ -1,0 +1,16 @@
+<article class="publication-item">
+  <div class="item-year" aria-label="Published in {{ .Date.Format "2006" }}">{{ .Date.Format "2006" }}</div>
+  <div class="item-body">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.authors }}
+      <p class="authors">
+        {{- range $index, $author := . -}}
+          {{- if $index }}, {{ end -}}
+          {{- if eq $author "admin" -}}<strong>Samuel Hurault</strong>{{- else -}}{{ $author }}{{- end -}}
+        {{- end -}}
+      </p>
+    {{ end }}
+    {{ with .Params.publication_short }}<p class="venue">{{ . | markdownify }}</p>{{ else }}{{ with .Params.publication }}<p class="venue">{{ . | markdownify }}</p>{{ end }}{{ end }}
+    {{ partial "resource-links.html" . }}
+  </div>
+</article>

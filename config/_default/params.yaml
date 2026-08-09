@@ -6,7 +6,7 @@
 # Appearance
 appearance:
   mode: system
-  color: green
+  color: blue
 
 # SEO
 marketing:
@@ -14,7 +14,7 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'Personal research website'
+    description: 'Samuel Hurault — CNRS researcher in generative modeling, image inverse problems, and optimization.'
     twitter: ''
   analytics:
     google_analytics: ''
@@ -31,8 +31,8 @@ header:
   navbar:
     enable: true
     blox: "navbar"
-    fixed_to_top: true
-    show_search: true
+    fixed_to_top: false
+    show_search: false
     show_theme_chooser: false
     logo:
       text: "Samuel Hurault"

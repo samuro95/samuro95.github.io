@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f5f0">
+    <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+    {{ $description := site.Params.marketing.seo.description | default "Personal research website of Samuel Hurault." }}
+    {{ with .Params.summary }}{{ $description = . | plainify }}{{ end }}
+    <meta name="description" content="{{ $description }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ $styles := resources.Get "css/academic.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  </head>
+  <body class="{{ if .IsHome }}home{{ else }}inner-page{{ end }}">
+    <a class="skip-link" href="#content">Skip to content</a>
+    {{ partial "site-header.html" . }}
+    <main id="content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "site-footer.html" . }}
+  </body>
+</html>

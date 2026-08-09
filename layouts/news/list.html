@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <div class="shell page-shell">
+    <header class="page-intro">
+      <p class="eyebrow">Updates</p>
+      <h1>News</h1>
+      <p>Research updates, including new publications synchronized from Google Scholar.</p>
+    </header>
+    <div class="news-list full-list">
+      {{ range .Pages.ByDate.Reverse }}{{ partial "news-item.html" . }}{{ end }}
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,12 @@
+<article class="talk-item">
+  <div class="item-date">
+    <span class="date-day">{{ .Date.Format "02" }}</span>
+    <span>{{ .Date.Format "Jan 2006" }}</span>
+  </div>
+  <div class="item-body">
+    <p class="eyebrow">{{ .Params.location | default "Talk" }}</p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.summary }}<p class="summary">{{ . | markdownify }}</p>{{ end }}
+    {{ partial "resource-links.html" . }}
+  </div>
+</article>
