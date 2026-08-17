@@ -127,6 +127,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.15rem); letter-spacing: -0.035em; }
 h3 { font-size: 1.18rem; letter-spacing: -0.015em; }
 
 .intro h1 { margin-bottom: 6px; }
+#intro-name { font-size: clamp(2.55rem, 6.2vw, 4.6rem); }
 
 .position { margin: 0 0 28px; color: var(--muted); font-size: 1rem; }
 .position a { color: inherit; }
@@ -286,6 +287,7 @@ h3 { font-size: 1.18rem; letter-spacing: -0.015em; }
   .portrait { width: 190px; }
   .portrait-wrap::before { width: 190px; right: auto; }
   h1 { font-size: clamp(2.75rem, 15vw, 4.4rem); }
+  #intro-name { font-size: clamp(2.5rem, 13vw, 3.9rem); }
   .research-strip { grid-template-columns: 1fr; gap: 19px; margin-top: 52px; }
   .research-strip ul { display: grid; gap: 7px; }
   .research-strip li:not(:last-child)::after { content: none; }

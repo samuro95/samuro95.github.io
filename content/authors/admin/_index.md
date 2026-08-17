@@ -44,10 +44,10 @@ profiles:
 
 interests:
   - Diffusion models & Flow Matching.
-  - Large Language Models.
   - Drifting models.
   - Image inverse problems.
   - Proximal algorithms.
+  - Large Language Models.
 
 education:
   - area: PhD in Machine Learning & Image Processing
