@@ -2,14 +2,14 @@
 title: "Geometry-aware discretization error of diffusion models"
 authors:
   - "admin"
-  - "T Moreau"
-  - "G Peyré"
+  - "Thomas Moreau"
+  - "Gabriel Peyré"
 date: "2026-01-01"
 publishDate: "2026-01-01"
 publication_types: ['3']
-publication: "arXiv preprint arXiv:2605.08392, 2026"
+publication: "arXiv preprint arXiv:2605.08392v2, 2026"
 publication_short: ''
-abstract: ''
+abstract: "Practical diffusion sampling requires simulating a reverse-time ODE or SDE with a limited number of denoising steps, making the choice of sampling parameters crucial for minimizing discretization error. We derive asymptotically exact small-stepsize expansions of Euler-Maruyama weak and Fréchet errors for general smooth reverse diffusions, with explicit formulas for Gaussian data. The resulting objectives optimize the noise and rescaling schedules and the stochasticity coefficient according to the target covariance spectrum."
 featured: false
 url_pdf: "https://arxiv.org/pdf/2605.08392"
 url_code: ''
