@@ -7,9 +7,9 @@ authors:
   - "J Delon"
 date: "2026-01-01"
 publishDate: "2026-01-01"
-publication_types: ['3']
-publication: "arXiv preprint arXiv:2605.07513, 2026"
-publication_short: ''
+publication_types: ['1']
+publication: "In *Neural Information Processing Systems 2026* (Oral)"
+publication_short: "In *Neurips 2026* (Oral)"
 abstract: ''
 featured: false
 url_pdf: "https://arxiv.org/pdf/2605.07513"
